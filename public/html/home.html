@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/detail.css">
+    <link rel="stylesheet" href="../css/reset.css">
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <img src="http://www.mobiletrain.org/images/index/new_logo.png" alt="">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="#">列表</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" id="username">未登录</a></li>
+                <li><a href="#" id="js-logout">退出</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<!-- 主题部分 -->
+<!-- tabBar -->
+<div class="container_detail">
+    <div class="tabbar">
+        <ul>
+            <li class="active">系统首页</li>
+            <li>职位列表</li>
+            <li>职位管理</li>
+        </ul>
+    </div>
+    <div class="content">
+        <!-- <div class="list">
+            <div class="list_job">
+               <div class="job_des">
+                    <div class="job_name">前端开发工程师</div>
+                    <div class="job_price">8000</div>
+                    <div class="job_ex">经验3-5年 本科</div>
+               </div>
+               <div class="com_des">
+                   <div class="company_logo">
+                       <img src="https://www.lgstatic.com/thumbnail_100x100/i/image3/M00/28/02/Cgq2xlqa2jWAGAnMAAArW2y3MsY901.jpg"/>
+                   </div>
+                   <div class="company_name">北京阿里科技有限公司</div>
+               </div>
+               <div class="operation">
+                   <button class="btn btn-danger">删除</button>
+                   <button class="btn btn-info">修改</button>
+               </div>
+            </div>
+        </div> -->
+        <div id="jobHome"><h2>首页</h2></div>
+        <div id="addJob"></div>
+        <div id="jobList"></div>
+
+    </div>
+    <!-- 模块框 -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="jobModel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">请修改内容</h4>
+                </div>
+                <div class="modal-body">
+                    <!--<form id="modifyJob">-->
+                        <!--<div class="form-group">-->
+                            <!--<label for="job_modify_name">职位名称</label>-->
+                            <!--<input type="text" class="form-control" id="job_modify_name" placeholder="请输入职位名称">-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<label for="job_modify_price">薪资</label>-->
+                            <!--<input type="text" class="form-control" id="job_modify_price" placeholder="薪资范围">-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<label for="job_modify_ask">要求</label>-->
+                            <!--<input type="text" class="form-control" id="job_modify_ask" placeholder="招聘要求">-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<label for="company_modify_name">公司名称</label>-->
+                            <!--<input type="text" class="form-control" id="company_modify_name" placeholder="请输入公司名称">-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<label for="logo_modify">上传公司logo</label>-->
+                            <!--<input type="file" id="logo_modify" multiple>-->
+                        <!--</div>-->
+                    <!--</form>-->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="modify_btn" data-dismiss="modal">修改</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="../js/lib/jquery-1.11.3.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/js-cookie/2.1.3/js.cookie.min.js"></script>
+<script src="../js/js/home/userInfo.js"></script>
+<script src="../js/js/home/jobList.js"></script>
+<script src="../js/js/home/addJob.js"></script>
+<script src="../js/js/home/page.js"></script>
